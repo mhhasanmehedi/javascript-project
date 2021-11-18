@@ -1,4 +1,4 @@
-@import '../../variables.scss';
+@import "../../variables.scss";
 
 .container {
   width: 1200px;
@@ -7,7 +7,7 @@
     text-align: center;
     letter-spacing: 3px;
     position: relative;
-    margin: 100px;
+    margin: 100px 0;
     &::after {
       height: 3px;
       animation: mymove1 1s infinite;
@@ -16,7 +16,7 @@
       bottom: -10px;
       transform: translateX(-50%);
       position: absolute;
-      content: '';
+      content: "";
       border-radius: 40px;
     }
     &::before {
@@ -27,7 +27,7 @@
       bottom: -17px;
       transform: translateX(-50%);
       position: absolute;
-      content: '';
+      content: "";
       border-radius: 40px;
     }
   }
