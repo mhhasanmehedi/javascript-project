@@ -1,0 +1,63 @@
+@import '../../variables.scss';
+
+.container {
+  width: 1200px;
+  margin: auto;
+  h2 {
+    text-align: center;
+    letter-spacing: 3px;
+    position: relative;
+    margin: 100px;
+    &::after {
+      height: 3px;
+      animation: mymove1 1s infinite;
+      background-color: $primary-color;
+      left: 50%;
+      bottom: -10px;
+      transform: translateX(-50%);
+      position: absolute;
+      content: '';
+      border-radius: 40px;
+    }
+    &::before {
+      height: 3px;
+      animation: mymove2 1s infinite;
+      background-color: $primary-color;
+      left: 50%;
+      bottom: -17px;
+      transform: translateX(-50%);
+      position: absolute;
+      content: '';
+      border-radius: 40px;
+    }
+  }
+  @keyframes mymove1 {
+    0% {
+      width: 50px;
+    }
+    50% {
+      width: 100px;
+    }
+    100% {
+      width: 50px;
+    }
+  }
+  @keyframes mymove2 {
+    0% {
+      width: 100px;
+    }
+    50% {
+      width: 50px;
+    }
+    100% {
+      width: 100px;
+    }
+  }
+  .post {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
