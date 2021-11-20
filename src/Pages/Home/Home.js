@@ -1,11 +1,16 @@
-import Post from "../../Components/Post/Post";
-import { Helmet } from "react-helmet";
-import "./Home.scss";
-import { useContext } from "react";
-import { PostContext } from "../../App";
+import Post from '../../Components/Post/Post';
+import { Helmet } from 'react-helmet';
+import './Home.scss';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
-  const [posts] = useContext(PostContext);
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:5000/posts')
+      .then((res) => res.json())
+      .then((data) => setPosts(data));
+  }, []);
 
   return (
     <>
@@ -13,9 +18,9 @@ const Home = () => {
         <title>Home Page</title>
       </Helmet>
 
-      <div className="container">
+      <div className='container'>
         <h2>Javascript Project</h2>
-        <div className="post">
+        <div className='post'>
           {posts.map((post) => (
             <Post key={post.id} post={post} />
           ))}
