@@ -1,0 +1,24 @@
+@import "../../variables.scss";
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0;
+  .logo a {
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 900;
+    color: black;
+    span {
+      color: $primary-color;
+    }
+  }
+  .main-menu a {
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 20px;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+}

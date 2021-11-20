@@ -1,13 +1,14 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import './Post.scss';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Post.scss";
 
 const Post = ({ post }) => {
+  const { _id, imgURL, title } = post;
   return (
-    <div className='post__item'>
-      <Link to={`/post/${post.id}`}>
-        <img width='100%' src={post.img} alt='' />
-        <h4>{post.title}</h4>
+    <div className="post__item">
+      <Link to={`/post/${_id}`}>
+        <img width="100%" src={imgURL} alt={title} />
+        <h4>{title}</h4>
       </Link>
     </div>
   );

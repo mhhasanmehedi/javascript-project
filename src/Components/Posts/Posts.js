@@ -1,35 +1,52 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router";
-import PostData from "../../PostData.json";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 import "./Posts.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
+// import { useContext } from "react";
+// import { PostContext } from "../../App";
 
 const Posts = () => {
   const { postId } = useParams();
-  let posts = PostData.filter((x) => x.id === Number(postId));
+  // const [posts] = useContext(PostContext);
+  // let post = posts.filter((x) => x._id === postId);
+  // console.log(post[0].title);
 
+  // const [post, setPost] = useState([]);
+
+  useEffect(() => {
+    fetch(`http://localhost:5000/posts/${postId}`)
+      // .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      });
+  });
+
+  // console.log(post);
   return (
     <>
-      <Helmet>
-        <title>Post || {posts[0].title}</title>
+      {/* <Helmet>
+        <title>Post || {post[0].title}</title>
       </Helmet>
       <div>
         <div className="single-post">
-          <h3>{posts[0].title}</h3>
-          <img width="100%" height="400px" src={posts[0].img} alt="" />
-          <p>{posts[0].title}</p>
+          <h3>{post[0].title}</h3>
+          <img width="100%" height="400px" src={post[0].imgURL} alt="" />
+          <p>{post[0].title}</p>
+          <br />
           <p>
-            Link Link: <a href={posts[0].live}>{posts[0].live}</a>
+            Link Link: <a href={post[0].liveLink}>{post[0].liveLink}</a>
           </p>
+          <br />
           <p>
-            Github Link: <a href={posts[0].github}>{posts[0].github}</a>
+            Github Link: <a href={post[0].githubLink}>{post[0].githubLink}</a>
           </p>
+          <br />
           <Link to="/home" className="btn">
             <button type="button">Go home</button>
           </Link>
         </div>
-      </div>
+      </div> */}
     </>
   );
 };

@@ -1,0 +1,51 @@
+@import "../../variables.scss";
+.post__form {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 30px 0;
+    font-weight: lighter;
+  }
+  form {
+    width: 500px;
+    padding: 30px;
+    background: #ddd;
+    border-radius: 25px 25px 25px 0;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    input {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0;
+      border: none;
+      outline: none;
+      border-radius: 15px 15px 15px 0;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      font-size: 16px;
+    }
+    label {
+      display: inline-block;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+      padding: 15px;
+      margin: 5px 0;
+      border-radius: 15px 15px 15px 0;
+      img {
+        width: 15px;
+        height: 15px;
+        line-height: 15px;
+      }
+    }
+    input[type="submit"] {
+      background: $primary-color;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+    }
+  }
+}
