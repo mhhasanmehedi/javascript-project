@@ -20,7 +20,7 @@ const PostDetail = () => {
       .then((res) => res.json())
       .then((data) => setPost(data));
   }, [postId]);
-  const shareUrl = `https://react-routing12.netlify.app/`;
+  const shareUrl = `https://javascript-project12.netlify.app/post/${postId}`;
   return (
     <>
       <Helmet>
