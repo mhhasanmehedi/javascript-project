@@ -16,7 +16,7 @@ const PostDetail = () => {
   const { title, imgURL, liveLink, githubLink } = post;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/posts/${postId}`)
+    fetch(`https://pure-journey-77314.herokuapp.com/posts/${postId}`)
       .then((res) => res.json())
       .then((data) => setPost(data));
   }, [postId]);

@@ -17,7 +17,7 @@ const AddPost = () => {
       date: new Date().toDateString(),
     };
 
-    fetch(`http://localhost:5000/addPost`, {
+    fetch(`https://pure-journey-77314.herokuapp.com/addPost`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

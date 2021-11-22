@@ -6,14 +6,14 @@ const AllPost = () => {
   const [AllPost, setAllPost] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/posts/')
+    fetch('https://pure-journey-77314.herokuapp.com/posts/')
       .then((res) => res.json())
       .then((data) => setAllPost(data));
   }, []);
 
   const handleDelete = (id, event) => {
     console.log(event.target.parentNode.parentNode);
-    fetch(`http://localhost:5000/postDelete/${id}`, {
+    fetch(`https://pure-journey-77314.herokuapp.com/postDelete/${id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

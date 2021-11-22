@@ -7,7 +7,7 @@ const Home = () => {
   const [posts, setPosts] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:5000/posts')
+    fetch('https://pure-journey-77314.herokuapp.com/posts')
       .then((res) => res.json())
       .then((data) => setPosts(data));
   }, []);
