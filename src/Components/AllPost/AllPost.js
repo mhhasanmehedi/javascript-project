@@ -33,7 +33,7 @@ const AllPost = () => {
 
   return (
     <div className='container'>
-      <h2>HTML Table</h2>
+      <h2>All Post</h2>
 
       <table>
         <thead>

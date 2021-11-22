@@ -1,9 +1,9 @@
-@import "../../variables.scss";
+@import '../../variables.scss';
 .post__form {
-  height: 100vh;
+  height: 90vh;
   width: 100%;
   display: flex;
-  justify-content: center;
+  // justify-content: center;
   align-items: center;
   flex-direction: column;
   h2 {
@@ -41,7 +41,7 @@
         line-height: 15px;
       }
     }
-    input[type="submit"] {
+    input[type='submit'] {
       background: $primary-color;
       cursor: pointer;
       text-transform: uppercase;

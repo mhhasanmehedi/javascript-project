@@ -3,6 +3,12 @@ import { useParams } from 'react-router';
 import { Helmet } from 'react-helmet';
 import './PostDetail.scss';
 import { Link } from 'react-router-dom';
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  LinkedinShareButton,
+  LinkedinIcon,
+} from 'react-share';
 
 const PostDetail = () => {
   const { postId } = useParams();
@@ -13,7 +19,8 @@ const PostDetail = () => {
     fetch(`http://localhost:5000/posts/${postId}`)
       .then((res) => res.json())
       .then((data) => setPost(data));
-  }, {});
+  }, [postId]);
+  const shareUrl = `https://react-routing12.netlify.app/`;
   return (
     <>
       <Helmet>
@@ -34,6 +41,14 @@ const PostDetail = () => {
             Github Link: <a href={githubLink}>{githubLink}</a>
           </p>
           <br />
+
+          <FacebookShareButton url={shareUrl}>
+            <FacebookIcon size={40} />
+          </FacebookShareButton>
+          <LinkedinShareButton url={shareUrl}>
+            <LinkedinIcon size={40} />
+          </LinkedinShareButton>
+
           <Link to='/home' className='btn'>
             <button type='button'>Go home</button>
           </Link>

@@ -49,7 +49,7 @@ const AddPost = () => {
   };
 
   return (
-    <div className='post__form'>
+    <div className='post__form container'>
       <h2>Add Your Post</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <input
